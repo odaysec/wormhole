@@ -229,7 +229,7 @@ async function migrateTokenBridge(
   const wormholePackage = await getPackageId(signer.provider, wormholeStateId);
 
   const tx = new TransactionBlock();
-
+ 
   const [verifiedVaa] = tx.moveCall({
     target: `${wormholePackage}::vaa::parse_and_verify`,
     arguments: [
